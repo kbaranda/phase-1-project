@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Hydrant Finder</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+    <h1>Hydrant Finder</h1>
+    <form id="hydrantForm">
+      <label>What station are you at?</label><br>
+      <select id="select" name="station">
+      </select>
+      <div id="div1">
+        <p id="yourStation"></p>
+        <p id="description"></p>
+        <p>Press Submit to see the closest hydrant</p>
+      </div>
+      <input onclick="unhideHydrantSection()" type="button" value="Submit">
+    </form>
+    <div id="hydrantSection">
+      <h4 id=closestHydrantText>The closest fire hydrants are on the corner of:</h4>
+      <ul id ="hydrantUl">
+      </ul>
+    </div>
+  </body>
+</html>

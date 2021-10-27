@@ -1,0 +1,22 @@
+{
+  "fireStation": [
+    {
+      "id": 1,
+      "name": "Public Safety Headquarters",
+      "address": "498 Monroe St",
+      "description" : "The newest station connected to Eagel Pass Police Department. Located off Monroe St. with 1 Ladder, 1 Ambulance, 1 Booster, 1 Command"
+    },
+    {
+      "id": 2,
+      "name": "Della L Willars",
+      "address": "2420 Second St",
+      "description" : "Soon to be remodeled. Located off Second St. with 1 Engine, 1 Ambulance, 1 Rescue, 1 Booster, 1 Command"
+    },
+    {
+      "id": 3,
+      "name": "Cardona Station",
+      "address": "2558 El Indio  Hwy",
+      "description" : "Now connected with Eagel Pass Fire Marshals. Located off El Indio Hwy with 1 Engine, 2 Ambulance, 1 Booster, 1 Command"
+    }
+  ]
+}
