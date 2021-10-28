@@ -8,22 +8,34 @@
   </head>
 
   <body>
-    <h1>Hydrant Finder</h1>
-    <form id="hydrantForm">
-      <label>What station are you at?</label><br>
-      <select id="select" name="station">
-      </select>
-      <div id="div1">
-        <p id="yourStation"></p>
-        <p id="description"></p>
-        <p>Press Submit to see the closest hydrant</p>
+  <section id="banner">
+    <div class="content">
+      <h1>Hydrant Finder</h1>
+      <form id="hydrantForm" onsubmit="return submit()">
+        <label>What station are you at?</label><br>
+        <select id="select" name="station">
+        </select>
+        <div id="div1">
+          <h3 id="yourStation">You're at Station 1</h3>
+          <div id="imgSection">
+            <img src="https://www.eptx411.com/images/member_uploads/member_7c9e6f8940d7af9cb5de76f08e88b317/d005579a1168034a8272657df199a8fecb8796cf.png">
+          </div>
+          <p id="address">Public Safety Headquarters, 498 Monroe St</p>
+          <p id="description">The newest station connected to Eagel Pass Police Department. Located off Monroe St. with 1 Ladder, 1 Ambulance, 1 Booster, 1 Command.</p>
+          <p>Press Submit to See the Closest Hydrant</p>
+        </div>
+        <input type="submit" value="Submit">
+        <!-- <h4>Comments:</h4>
+        <p id="commentSection"></p>
+        <textarea name="comments"></textarea> -->
+        <!-- <input type="button" value="Comment" id="comment"> -->
+      </form>
+      <div id="hydrantSection">
+        <h4 id=closestHydrantText>The closest fire hydrants are on the corner of:</h4>
+        <ul id ="hydrantUl">
+        </ul>
       </div>
-      <input onclick="unhideHydrantSection()" type="button" value="Submit">
-    </form>
-    <div id="hydrantSection">
-      <h4 id=closestHydrantText>The closest fire hydrants are on the corner of:</h4>
-      <ul id ="hydrantUl">
-      </ul>
     </div>
+  </section>
   </body>
 </html>

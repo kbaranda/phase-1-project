@@ -1,3 +1,20 @@
+/* *{
+  margin:0;
+  padding: 0;
+} */
 #hydrantSection {
-  display: none;
+  display: block;
 }
+
+.content {
+  max-width: 500px;
+  margin: auto;
+}
+
+ /* #banner {
+   height: 100%;
+   background-size: cover;
+   background-position: center;
+   background: no-repeat;
+   background-image: linear-gradient(rgba(0,0,0,0.5),red), url("downtown.jpg");
+} */

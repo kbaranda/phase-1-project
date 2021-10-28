@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded",() => {
   fetchStations()
+  // comment()
 });
 
 
@@ -15,30 +16,38 @@ function renderStaions(station) {
   option.value = `${station.id}`
   option.innerHTML = `${station.name}`
   select.append(option)
-  addDescription(station)
+  addInfo(station)
 };
 
-function addDescription(station) {
+function addInfo(station) {
   const select = document.querySelector("#select")
   
   select.addEventListener("change", (event) => {
-    console.log(station)
     const yourStation = document.querySelector("#yourStation")
-    yourStation.innerText = `You're at station ${event.target.value}`
-    if (`${station.id}` === event.target.value){
+    yourStation.innerHTML = `You're at Station ${event.target.value}`
+    if (`${station.id}` == event.target.value){
+      const img = document.querySelector("#imgSection")
+      img.innerHTML = `<img src="${station.img}">`
+      const address = document.querySelector("#address")
+      address.innerHTML = `${station.name}, ${station.address}`
       const description = document.querySelector("#description")
       description.innerText = `${station.description}`
     }
-  })
+    const hydrantSection = document.querySelector("#hydrantSection")
+    hydrantSection.style.display = "none"  })
 };
 
-function unhideHydrantSection() {
+
+function submit() {
+  debugger
+  console.log("hello")
   const hydrantSection = document.querySelector("#hydrantSection")
   hydrantSection.style.display = "block"
   const ul = document.querySelector("#hydrantUl")
   ul.innerText = ""
   const addLi = () => {
     const select = document.querySelector("#select")
+    console.log(select)
     if(select.value === "1"){
       ul.innerHTML =`
       <li>Adams and Bliss</li>
@@ -54,10 +63,18 @@ function unhideHydrantSection() {
     } else if(select.value === "3") {
       ul.innerHTML =`
       <li>El Indio and Morales</li>
-      <li>El Indio and Camarinos/li>
+      <li>El Indio and Camarinos</li>
       <li>Lakonia and Kiriaka</li>
       `
     }
   }
   addLi()
+  return false
 };
+
+// function comment() {
+//   const commentBtn = document.querySelector("#commentBtn")
+//   commentBtn.addEventListener("click", (event) => {
+//     console.log(event.target.querySelector("#comment").value)
+//   })
+// }
