@@ -11,7 +11,7 @@
   <section id="banner">
     <div class="content">
       <h1>Hydrant Finder</h1>
-      <form id="hydrantForm" onsubmit="return submit()">
+      <form id="hydrantForm" onsubmit="mySubmit(); return false">
         <label>What station are you at?</label><br>
         <select id="select" name="station">
         </select>
@@ -25,10 +25,10 @@
           <p>Press Submit to See the Closest Hydrant</p>
         </div>
         <input type="submit" value="Submit">
-        <!-- <h4>Comments:</h4>
-        <p id="commentSection"></p>
-        <textarea name="comments"></textarea> -->
-        <!-- <input type="button" value="Comment" id="comment"> -->
+        <!-- <h4>Comments:</h4> -->
+        <!-- <p id="commentSection"></p>
+        <textarea name="comments"></textarea>
+        <input type="button" value="Comment" id="comment"> -->
       </form>
       <div id="hydrantSection">
         <h4 id=closestHydrantText>The closest fire hydrants are on the corner of:</h4>

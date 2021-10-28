@@ -3,7 +3,7 @@
   padding: 0;
 } */
 #hydrantSection {
-  display: block;
+  display: none;
 }
 
 .content {

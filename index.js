@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded",() => {
 function fetchStations() {
   fetch("http://localhost:3000/fireStation")
   .then(resp => resp.json())
-  .then(data => data.forEach(renderStaions))
+  .then(data => data.forEach(renderStations))
 };
 
-function renderStaions(station) {
+function renderStations(station) {
   const select = document.querySelector("#select")
   const option = document.createElement("option")
   option.value = `${station.id}`
@@ -38,9 +38,7 @@ function addInfo(station) {
 };
 
 
-function submit() {
-  debugger
-  console.log("hello")
+function mySubmit() {
   const hydrantSection = document.querySelector("#hydrantSection")
   hydrantSection.style.display = "block"
   const ul = document.querySelector("#hydrantUl")
@@ -69,7 +67,6 @@ function submit() {
     }
   }
   addLi()
-  return false
 };
 
 // function comment() {
